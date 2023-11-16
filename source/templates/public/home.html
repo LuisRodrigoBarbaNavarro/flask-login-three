@@ -1,0 +1,56 @@
+{% extends '/public/base.html' %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="#"><i class="fas fa-otter fa-2x link-primary"></i></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Acerca</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('logout')}}">Cerrar Sesión</a>
+                </li>
+            </ul>
+            <form class="d-flex input-group w-auto">
+                <input type="search" class="form-control" placeholder="¿Qué deseas buscar?" aria-label="Search" />
+                <button class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark">
+                    Buscar
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- Navbar -->
+<!-- Jumbotron -->
+<div class="m-4 p-4 shadow-4 rounded-3" style="background-color: hsl(0, 0%, 94%);">
+    <h2> ¡Hola, {{current_user.fullname}}! </h2>
+    <p>
+        Este es el apartado principal de la página web, aquí podrás encontrar
+        información sobre los servicios que ofrecemos, así como también podrás
+        ver información relevante sobre las nutrias y su cuidado.
+    </p>
+
+    <hr class="my-4" />
+
+    <p>
+        En caso de que quieras saber más sobre nosotros, puedes visitar la siguiente página.
+    </p>
+    <button type="button" class="btn btn-primary">
+        Acerca de nosotros
+    </button>
+</div>
+<!-- Jumbotron -->
+{% endblock %}
