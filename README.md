@@ -8,7 +8,7 @@
 
 **Fecha (Creación):** 16/11/23
 
-**Descripción:**
+**Descripción:** En el presente repositorio se almacena la implementación práctica referente al gestor de inicio de sesión desarrollado con Flask. En esta instancia, se ha incorporado el manejo de sesiones con el objetivo de prevenir el acceso a secciones no autorizadas por parte del usuario.
 
 ---
 
