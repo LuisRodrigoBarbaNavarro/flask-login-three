@@ -19,5 +19,3 @@
 !["Tercer Ejemplo"](https://i.imgur.com/EuiM0kZ.png)
 
 ---
-
-### Implementación ✨
